@@ -137,6 +137,9 @@ const buildMusicInfo = (lx: Record<string, any>) => {
       updateTime: 0,
     },
   }
+  if (info.meta.source == 'kg') {
+    info.id = `kg_${info.id}`
+  }
   if (lx.meta.songId) {
     info.meta.musicId = String(lx.meta.songId)
   }
